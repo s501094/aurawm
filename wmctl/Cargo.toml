@@ -1,0 +1,11 @@
+[package]
+name = "wmctl"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "wmctl"
+path = "src/main.rs"
+
+[dependencies]
+wm-ipc = { path = "../wm-ipc" }

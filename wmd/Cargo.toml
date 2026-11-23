@@ -1,0 +1,26 @@
+[package]
+name = "wmd"
+version = "0.1.0"
+edition = "2021"
+description = "tilekit daemon: hooks OS window events, tiles via wm-core, serves wmctl over IPC."
+
+[[bin]]
+name = "wmd"
+path = "src/main.rs"
+
+[dependencies]
+wm-core = { path = "../wm-core" }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+wm-ipc = { path = "../wm-ipc" }
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.52", features = [
+  "Win32_Foundation",
+  "Win32_UI_WindowsAndMessaging",
+  "Win32_UI_Accessibility",
+  "Win32_Graphics_Dwm",
+  "Win32_Graphics_Gdi", 
+  "Win32_UI_HiDpi",
+  "Win32_UI_Input_KeyboardAndMouse"
+] }

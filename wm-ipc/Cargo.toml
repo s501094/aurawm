@@ -1,0 +1,5 @@
+[package]
+name = "wm-ipc"
+version = "0.1.0"
+edition = "2021"
+description = "Daemon<->CLI transport. Localhost TCP for v0 (std-only, identical on all OSes); named pipes/UDS later."

@@ -1,0 +1,64 @@
+# tilekit — whkd bindings (Windows)
+# whkd reloads on save. Cheatsheet works today; wmctl lines activate
+# automatically once wmd/wmctl are built (until then they no-op).
+
+alt + shift + oem_2            : tilekit-cheatsheet   # Alt+Shift+/
+alt + h : C:\Users\tellis\.local\bin\wmctl.exe focus --direction left
+alt + j : C:\Users\tellis\.local\bin\wmctl.exe focus --direction down
+alt + k : C:\Users\tellis\.local\bin\wmctl.exe focus --direction up
+alt + l : C:\Users\tellis\.local\bin\wmctl.exe focus --direction right
+# alt + h                        : wmctl focus --direction left
+# alt + j                        : wmctl focus --direction down
+# alt + k                        : wmctl focus --direction up
+# alt + l                        : wmctl focus --direction right
+# alt + left                     : wmctl focus --direction left
+# alt + down                     : wmctl focus --direction down
+# alt + up                       : wmctl focus --direction up
+# alt + right                    : wmctl focus --direction right
+
+alt + shift + h                : wmctl move --direction left
+alt + shift + j                : wmctl move --direction down
+alt + shift + k                : wmctl move --direction up
+alt + shift + l                : wmctl move --direction right
+
+alt + ctrl + h                 : wmctl resize --direction left
+alt + ctrl + j                 : wmctl resize --direction down
+alt + ctrl + k                 : wmctl resize --direction up
+alt + ctrl + l                 : wmctl resize --direction right
+
+alt + 1                        : wmctl workspace 1
+alt + 2                        : wmctl workspace 2
+alt + 3                        : wmctl workspace 3
+alt + 4                        : wmctl workspace 4
+alt + 5                        : wmctl workspace 5
+alt + 6                        : wmctl workspace 6
+alt + 7                        : wmctl workspace 7
+alt + 8                        : wmctl workspace 8
+alt + 9                        : wmctl workspace 9
+alt + shift + 1                : wmctl send 1
+alt + shift + 2                : wmctl send 2
+alt + shift + 3                : wmctl send 3
+alt + shift + 4                : wmctl send 4
+alt + shift + 5                : wmctl send 5
+alt + shift + 6                : wmctl send 6
+alt + shift + 7                : wmctl send 7
+alt + shift + 8                : wmctl send 8
+alt + shift + 9                : wmctl send 9
+
+alt + f                        : wmctl toggle-float
+alt + s                        : wmctl toggle-split
+alt + q                        : wmctl close
+alt + r                        : wmctl retile
+
+# --- AuraWM GlazeWM-parity additions ---
+# (letter keys chosen deliberately: whkd punctuation key names vary;
+#  rebind to alt+. / alt+, etc. once verified on your machine)
+alt + n                        : wmctl focus --next-workspace
+alt + p                        : wmctl focus --prev-workspace
+alt + b                        : wmctl focus --recent-workspace
+alt + shift + n                : wmctl move --next-workspace
+alt + shift + p                : wmctl move --prev-workspace
+alt + m                        : wmctl toggle-minimized
+alt + shift + f                : wmctl toggle-fullscreen
+alt + shift + w                : wmctl wm-redraw
+alt + shift + e                : wmctl wm-exit

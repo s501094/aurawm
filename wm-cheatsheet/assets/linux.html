@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>tilekit — Linux keybindings</title>
+<style>
+  :root { --base:#1e1e2e; --mantle:#181825; --surface:#313244; --text:#cdd6f4;
+          --sub:#a6adc8; --accent:#a6e3a1; --key-bg:#45475a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--base); color:var(--text); min-height:100vh; padding:36px 44px;
+         font-family:'JetBrains Mono','Cascadia Code','SF Mono',Menlo,monospace; }
+  header { display:flex; align-items:baseline; gap:14px; margin-bottom:8px; }
+  h1 { font-size:26px; letter-spacing:-0.5px; }
+  h1 span { color:var(--accent); }
+  .badge { background:var(--accent); color:var(--mantle); font-size:12px; font-weight:700;
+            padding:3px 10px; border-radius:999px; }
+  .sub { color:var(--sub); font-size:13px; margin-bottom:28px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:18px; }
+  section { background:var(--mantle); border:1px solid var(--surface); border-radius:14px;
+             padding:18px 20px; }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:2px; color:var(--accent);
+        margin-bottom:12px; }
+  table { width:100%; border-collapse:collapse; }
+  td { padding:5px 0; font-size:13.5px; vertical-align:middle; }
+  td.k { text-align:right; white-space:nowrap; padding-left:12px; }
+  kbd { background:var(--key-bg); border:1px solid #585b70; border-bottom-width:2px;
+         border-radius:6px; padding:2px 7px; font-size:12px; font-family:inherit; }
+  td.d { color:var(--sub); }
+  footer { margin-top:26px; color:var(--sub); font-size:12px; }
+  footer code { color:var(--text); }
+</style></head><body>
+<header><h1>tile<span>kit</span></h1><span class="badge">Linux</span></header>
+<p class="sub">sxhkd drives the keys &middot; wmctl drives the daemon &middot; press <kbd>Esc</kbd> to close</p>
+<div class="grid">
+<section><h2>Focus</h2><table><tr><td class="d">Focus left / down / up / right</td><td class="k"><kbd>Super</kbd> + <kbd>H/J/K/L</kbd></td></tr>
+<tr><td class="d">Focus (arrow keys)</td><td class="k"><kbd>Super</kbd> + <kbd>&larr;&darr;&uarr;&rarr;</kbd></td></tr></table></section>
+<section><h2>Move windows</h2><table><tr><td class="d">Swap left / down / up / right</td><td class="k"><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>H/J/K/L</kbd></td></tr></table></section>
+<section><h2>Resize</h2><table><tr><td class="d">Grow/shrink along axis</td><td class="k"><kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>H/J/K/L</kbd></td></tr>
+<tr><td class="d">Step is 5% of the split</td><td class="k"></td></tr></table></section>
+<section><h2>Workspaces</h2><table><tr><td class="d">Go to workspace 1&ndash;9</td><td class="k"><kbd>Super</kbd> + <kbd>1&ndash;9</kbd></td></tr>
+<tr><td class="d">Send window to workspace</td><td class="k"><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>1&ndash;9</kbd></td></tr></table></section>
+<section><h2>Window</h2><table><tr><td class="d">Toggle floating</td><td class="k"><kbd>Super</kbd> + <kbd>F</kbd></td></tr>
+<tr><td class="d">Toggle split direction</td><td class="k"><kbd>Super</kbd> + <kbd>S</kbd></td></tr>
+<tr><td class="d">Close window</td><td class="k"><kbd>Super</kbd> + <kbd>Q</kbd></td></tr>
+<tr><td class="d">Force retile</td><td class="k"><kbd>Super</kbd> + <kbd>R</kbd></td></tr></table></section>
+<section><h2>Help</h2><table><tr><td class="d">This cheatsheet</td><td class="k"><kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>/</kbd></td></tr></table></section>
+</div>
+<footer>Bindings live in <code>~/.config/sxhkd/sxhkdrc</code> — edit and reload sxhkd; no recompile needed.</footer>
+<script>addEventListener('keydown',e=>{if(e.key==='Escape')window.close();});</script>
+</body></html>

@@ -1,0 +1,9 @@
+[package]
+name = "wm-cheatsheet"
+version = "0.1.0"
+edition = "2021"
+description = "Opens the OS-specific tilekit keybinding cheatsheet (selected at compile time)."
+
+[[bin]]
+name = "tilekit-cheatsheet"
+path = "src/main.rs"

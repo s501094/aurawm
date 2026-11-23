@@ -1,0 +1,36 @@
+# tilekit — sxhkd bindings (Linux / X11)
+# Reload: pkill -USR1 sxhkd. Cheatsheet works today; wmctl lines
+# activate automatically once wmd/wmctl are built.
+
+super + shift + slash
+    tilekit-cheatsheet
+
+super + {h,j,k,l}
+    wmctl focus --direction {left,down,up,right}
+
+super + {Left,Down,Up,Right}
+    wmctl focus --direction {left,down,up,right}
+
+super + shift + {h,j,k,l}
+    wmctl move --direction {left,down,up,right}
+
+super + ctrl + {h,j,k,l}
+    wmctl resize --direction {left,down,up,right}
+
+super + {1-9}
+    wmctl workspace {1-9}
+
+super + shift + {1-9}
+    wmctl send {1-9}
+
+super + f
+    wmctl toggle-float
+
+super + s
+    wmctl toggle-split
+
+super + q
+    wmctl close
+
+super + r
+    wmctl retile

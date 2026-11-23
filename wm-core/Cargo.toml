@@ -1,0 +1,8 @@
+[package]
+name = "wm-core"
+version = "0.1.0"
+edition = "2021"
+description = "Pure tiling engine: BSP tree, layout math, command reducer. Zero OS deps."
+
+[dependencies]
+tracing = "0.1"

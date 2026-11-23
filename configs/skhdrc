@@ -1,0 +1,44 @@
+# tilekit — skhd bindings (macOS)
+# Reload: skhd --restart-service. Cheatsheet works today; wmctl lines
+# activate automatically once wmd/wmctl are built.
+
+cmd + alt - slash              : tilekit-cheatsheet
+
+cmd + alt - h                  : wmctl focus --direction left
+cmd + alt - j                  : wmctl focus --direction down
+cmd + alt - k                  : wmctl focus --direction up
+cmd + alt - l                  : wmctl focus --direction right
+
+shift + cmd + alt - h          : wmctl move --direction left
+shift + cmd + alt - j          : wmctl move --direction down
+shift + cmd + alt - k          : wmctl move --direction up
+shift + cmd + alt - l          : wmctl move --direction right
+
+ctrl + cmd + alt - h           : wmctl resize --direction left
+ctrl + cmd + alt - j           : wmctl resize --direction down
+ctrl + cmd + alt - k           : wmctl resize --direction up
+ctrl + cmd + alt - l           : wmctl resize --direction right
+
+cmd + alt - 1                  : wmctl workspace 1
+cmd + alt - 2                  : wmctl workspace 2
+cmd + alt - 3                  : wmctl workspace 3
+cmd + alt - 4                  : wmctl workspace 4
+cmd + alt - 5                  : wmctl workspace 5
+cmd + alt - 6                  : wmctl workspace 6
+cmd + alt - 7                  : wmctl workspace 7
+cmd + alt - 8                  : wmctl workspace 8
+cmd + alt - 9                  : wmctl workspace 9
+shift + cmd + alt - 1          : wmctl send 1
+shift + cmd + alt - 2          : wmctl send 2
+shift + cmd + alt - 3          : wmctl send 3
+shift + cmd + alt - 4          : wmctl send 4
+shift + cmd + alt - 5          : wmctl send 5
+shift + cmd + alt - 6          : wmctl send 6
+shift + cmd + alt - 7          : wmctl send 7
+shift + cmd + alt - 8          : wmctl send 8
+shift + cmd + alt - 9          : wmctl send 9
+
+cmd + alt - f                  : wmctl toggle-float
+cmd + alt - s                  : wmctl toggle-split
+cmd + alt - q                  : wmctl close
+cmd + alt - r                  : wmctl retile
